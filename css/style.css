@@ -545,7 +545,7 @@ a {
 }
 
 .theme.col-4 {
-  background-color: #7ee6fd;
+  background-color: 74.3137254902%;
 }
 
 .theme.col-5 {
@@ -608,8 +608,8 @@ a {
   [class^=col] {
     display: flex;
     justify-content: center;
-    margin-top: 0;
     align-items: center;
+    margin-top: 0;
   }
 
   [class^=col] + [class^=col] {
