@@ -19,4 +19,15 @@
     color: $white;
     background-color: $primary-color;
   }
+
+  @include mq($break-m) {
+    & {
+      @include flexy($dir: row, $just: flex-end);
+  
+      align-items: center;
+      &-link {
+        flex-basis: 100px;
+      }
+    }
+  }
 }

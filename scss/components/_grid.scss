@@ -4,11 +4,19 @@
 
 .container {
   padding: 0 10px;
+
+  @include mq($break-m) {
+    max-width: 1400px;
+    @include center;
+  }
 }
 
 .row {
   @include flexy($disp: flex, $dir: column);
   padding: 1em 10px;
+  @include mq($break-m) {
+    @include flexy($dir: row);
+  }
 }
 
 [class^="col"] {
@@ -17,6 +25,10 @@
   min-height: 25px;
   padding: 10px;
   border-radius: 5px;
+  @include mq($break-m) {
+    @include flexy($disp: flex, $just: center, $align: center);
+    margin-top: 0;
+  }
 }
 
 .theme.col-1 {
@@ -45,7 +57,7 @@
 
 .theme.col-7 {
   background-color: #ec9fa3;
-}
+  }
 
 .theme.col-8 {
   background-color: #fd9f85;

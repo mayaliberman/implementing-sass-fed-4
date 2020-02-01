@@ -3,22 +3,9 @@
 /* ============================================= */
 
 @media (min-width: $break-m) {
-  .container {
-    max-width: 1400px;
-    @include center;
-  }
-
+  
   .centered {
     @include center;
-  }
-
-  .row {
-    @include flexy($dir: row);
-  }
-
-  [class^="col"] {
-    @include flexy($disp: flex, $just: center, $align: center);
-    margin-top: 0;
   }
 
   [class^="col"] + [class^="col"] {
@@ -73,25 +60,4 @@
     flex-basis: 100%;
   }
 
-  .nav {
-    @include flexy($dir: row, $just: flex-end);
-
-    align-items: center;
-    &-link {
-      flex-basis: 100px;
-    }
-  }
-
-  .btn {
-    padding: 10px 30px;
-  }
-
-  .btn + .btn {
-    margin-left: 10px;
-  }
-
-  .logo {
-    margin-left: initial;
-    margin-right: initial;
-  }
 }

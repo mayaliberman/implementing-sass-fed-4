@@ -414,6 +414,15 @@ a {
   padding: 10px 0;
   text-transform: uppercase;
   border-radius: 5px;
+  transition: background-color 0.2 ease-in;
+}
+@media (min-width: 768px) {
+  .btn {
+    padding: 10px 30px;
+  }
+  .btn + .btn {
+    margin-left: 10px;
+  }
 }
 
 .default {
@@ -482,6 +491,16 @@ a {
   color: #fff;
   background-color: #58e1c1;
 }
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav-link {
+    flex-basis: 100px;
+  }
+}
 
 /* ============================================= */
 /*             Images                            */
@@ -517,11 +536,24 @@ a {
 .container {
   padding: 0 10px;
 }
+@media (min-width: 768px) {
+  .container {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .row {
   display: flex;
   flex-direction: column;
   padding: 1em 10px;
+}
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
 }
 
 [class^=col] {
@@ -530,6 +562,14 @@ a {
   min-height: 25px;
   padding: 10px;
   border-radius: 5px;
+}
+@media (min-width: 768px) {
+  [class^=col] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
 }
 
 .theme.col-1 {
@@ -545,7 +585,7 @@ a {
 }
 
 .theme.col-4 {
-  background-color: 74.3137254902%;
+  background-color: #7ee6fd;
 }
 
 .theme.col-5 {
@@ -558,6 +598,7 @@ a {
 
 .theme.col-7 {
   background-color: #ec9fa3;
+  align-content: center;
 }
 
 .theme.col-8 {
@@ -588,28 +629,10 @@ a {
 /*              Media Queries                    */
 /* ============================================= */
 @media (min-width: 768px) {
-  .container {
-    max-width: 1400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .centered {
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .row {
-    flex-direction: row;
-  }
-
-  [class^=col] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
   }
 
   [class^=col] + [class^=col] {
@@ -662,28 +685,6 @@ a {
 
   .col-12 {
     flex-basis: 100%;
-  }
-
-  .nav {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .nav-link {
-    flex-basis: 100px;
-  }
-
-  .btn {
-    padding: 10px 30px;
-  }
-
-  .btn + .btn {
-    margin-left: 10px;
-  }
-
-  .logo {
-    margin-left: initial;
-    margin-right: initial;
   }
 }
 
